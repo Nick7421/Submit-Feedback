@@ -6,7 +6,7 @@ class FeedbackFeeling extends Component {
     constructor() {
         super();
         this.state = {
-            feeling: 0,
+            feeling:'',
         }
     }
 

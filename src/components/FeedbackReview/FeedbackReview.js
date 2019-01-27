@@ -8,10 +8,10 @@ class FeedbackReview extends Component {
       <div>
         <h1>Review Your Feedback</h1>
         <p></p>
-        <p>Feelings:{this.props.reduxStore.feedback.feeling}</p>
-        <p>Understanding:</p>
-        <p>Support:</p>
-        <p>Comments:</p>
+        <p>Feelings: {this.props.reduxStore.feedback.feeling}</p>
+        <p>Understanding: {this.props.reduxStore.feedback.understanding}</p>
+        <p>Support: {this.props.reduxStore.feedback.support}</p>
+        <p>Comments: {this.props.reduxStore.feedback.comments}</p>
         <button>Submit</button>
       </div>
     )
