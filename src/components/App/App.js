@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter as Router,Route, Link } from 'react-router-dom';
-import axios from 'axios';
+import { HashRouter as Router,Route } from 'react-router-dom';
 
 //Components needed for the routing pages
 import './App.css';
@@ -9,7 +8,6 @@ import FeedbackFeeling from './../FeedbackFeeling/FeedbackFeeling.js';
 import FeedbackUnderstanding from '../FeedbackUnderstanding/FeedbackUnderstanding.js';
 import FeedbackSupport from './../FeedbackSupport/FeedbackSupport.js';
 import FeedbackComments from './../FeedbackComments/FeedbackComments.js';
-import FeedbackReview from './../FeedbackReview/FeedbackReview.js';
 import FeedbackSucess from './../FeedbackSuccess/FeedbackSuccess.js';
 
 

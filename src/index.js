@@ -9,6 +9,10 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 const feedback = (state = {}, action) => {
+    if(action.type === "Submit_Feeling_Info") {
+        //update this too
+        return {...state,...action.payload};
+    }
     return state;
 }
 
