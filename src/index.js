@@ -13,6 +13,10 @@ const feedback = (state = {}, action) => {
         //update this too
         return {...state,...action.payload};
     }
+    else if(action.type === "Submit_Understanding_Info"){
+        //this will update the current state with the payload
+        return {...state,...action.payload};
+    }
     return state;
 }
 
