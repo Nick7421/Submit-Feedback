@@ -6,7 +6,7 @@ import axios from 'axios';
 import './App.css';
 import FeedbackHeader from './../FeedbackHeader/FeedbackHeader';
 import FeedbackFeeling from './../FeedbackFeeling/FeedbackFeeling.js';
-import FeedbackUnderstanding from './../FeedbackUnderstanding/FeedbackUnderstaning.js';
+import FeedbackUnderstanding from '../FeedbackUnderstanding/FeedbackUnderstanding.js';
 import FeedbackSupport from './../FeedbackSupport/FeedbackSupport.js';
 import FeedbackComments from './../FeedbackComments/FeedbackComments.js';
 import FeedbackReview from './../FeedbackReview/FeedbackReview.js';
@@ -21,7 +21,9 @@ class App extends Component {
         <br/>
       <Router>
         <div>
-
+      {/* <Route path='/' component={FeedbackHeader} /> */}
+      <Route exact path ="/feedback-feeling" component={FeedbackFeeling}/>
+      <Route exact path ="/feedback-understanding" component={FeedbackUnderstanding}/>
         </div>
       </Router>
       <FeedbackReview/>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class FeedbackUnderstaning extends Component {
+class FeedbackUnderstanding extends Component {
   render() {
     return (
       <div>
@@ -9,4 +9,4 @@ class FeedbackUnderstaning extends Component {
     )
   }
 }
-export default FeedbackUnderstaning;
+export default FeedbackUnderstanding;
