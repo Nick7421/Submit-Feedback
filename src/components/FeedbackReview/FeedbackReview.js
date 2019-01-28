@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import axios from 'axios';
-import history from 'history';
+
 
 class FeedbackReview extends Component {
     constructor(props){
-        super(props);{
+        super(props);
             this.state = {
                 comments:'',
          
             }
-        }
+        
     }
     //tested to make sure my reduxStore object is showing correctly before sending to the server
     // submitFeedback = () =>{
@@ -23,6 +23,7 @@ class FeedbackReview extends Component {
             url: '/userfeedback',
             data: this.props.reduxStore.feedback,
         }).then((response) => {
+            //*******The Following error was resolved by proping history to this component***********/
             // I am getting an error Here when trying to go to the next page
             // not sure if it is a timeing issue but it is
             //saying push is undefined but my data does get to the server and into the database.
