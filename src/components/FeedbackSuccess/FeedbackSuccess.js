@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 
 class FeedbackSuccess extends Component {
     handleChange = () => {
-        this.props.history.push('/feedback-comments');
-        
+        this.props.history.push('/');
+
     }
   render() {
 

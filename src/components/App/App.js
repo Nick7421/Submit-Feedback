@@ -9,6 +9,7 @@ import FeedbackUnderstanding from '../FeedbackUnderstanding/FeedbackUnderstandin
 import FeedbackSupport from './../FeedbackSupport/FeedbackSupport.js';
 import FeedbackComments from './../FeedbackComments/FeedbackComments.js';
 import FeedbackSucess from './../FeedbackSuccess/FeedbackSuccess.js';
+import FeedbackHome from './../FeedbackHome/FeedbackHome.js';
 
 
 
@@ -20,7 +21,7 @@ class App extends Component {
         <br/>
       <Router>
         <div>
-      {/* <Route path='/' component={FeedbackHeader} /> */}
+      <Route exact path ="/" component={FeedbackHome}/>
       <Route exact path ="/feedback-feeling" component={FeedbackFeeling}/>
       <Route exact path ="/feedback-understanding" component={FeedbackUnderstanding}/>
       <Route exact path ="/feedback-support" component={FeedbackSupport}/>

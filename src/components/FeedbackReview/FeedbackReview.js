@@ -24,7 +24,7 @@ class FeedbackReview extends Component {
         }).then((response) => {
             // I am getting an error Here when trying to go to the next page
             // not sure if it is a timeing issue but it is
-            //saying push is unddefined.
+            //saying push is undefined but my data does get to the server and into the database.
             this.props.history.push('/feedback-success');
         }).catch((error) => {
             const errorMessage = `Server error: ${error}`;
