@@ -8,7 +8,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
-const feedback = (state = {}, action) => {
+const feedback = (state = {comments:'',}, action) => {
     if(action.type === "Submit_Feeling_Info") {
         //update this too
         return {...state,...action.payload};
@@ -22,7 +22,7 @@ const feedback = (state = {}, action) => {
         return {...state,...action.payload};
     }
     else if(action.type ==="Submit_Comments_Info")
-    
+
         return {...state,...action.payload};
     return state;
 }

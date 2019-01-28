@@ -5,16 +5,18 @@ class FeedbackReview extends Component {
     constructor(props){
         super(props);{
             this.state = {
+                comments:'',
          
             }
         }
     }
     submitFeedback = () =>{
-
+        console.log(`working`);
     }
 
   render() {
-    const isEnabled = this.props.reduxStore.commentsReducer !== '';
+
+    const isEnabled = this.props.reduxStore.feedback.comments !== '';
 
     return (
       <div>
@@ -24,7 +26,7 @@ class FeedbackReview extends Component {
         <p>Understanding: {this.props.reduxStore.feedback.understanding}</p>
         <p>Support: {this.props.reduxStore.feedback.support}</p>
         <p>Comments: {this.props.reduxStore.feedback.comments}</p>
-        <button disabled={isEnabled}>Submit</button>
+        <button disabled={!isEnabled} onClick={this.submitFeedback}>Submit</button>
       </div>
     )
   }
