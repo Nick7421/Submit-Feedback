@@ -11,11 +11,12 @@ class FeedbackReview extends Component {
         }
     }
     submitFeedback = () =>{
-        console.log(`working`);
+    
     }
 
   render() {
 
+    // This variable looks at the redux store to return a boolen if comments is empty or completed.
     const isEnabled = this.props.reduxStore.feedback.comments !== '';
 
     return (
@@ -38,4 +39,3 @@ const mapReduxStoreToProps = (reduxStore) => ({
 });
 export default connect(mapReduxStoreToProps)(FeedbackReview);
 
-////disabled = !isenabled

@@ -19,7 +19,7 @@ class FeedbackComments extends Component {
     handleNext = (event) => {
         const action = { type: 'Submit_Comments_Info', payload: this.state };
         this.props.dispatch(action);
-        
+        alert('You can now submit your feedback');
         }
   render() {
     return (
