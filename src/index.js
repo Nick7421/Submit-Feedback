@@ -21,6 +21,9 @@ const feedback = (state = {}, action) => {
         //this will update the current state with the payload
         return {...state,...action.payload};
     }
+    else if(action.type ==="Submit_Comments_Info")
+    
+        return {...state,...action.payload};
     return state;
 }
 

@@ -26,6 +26,7 @@ class App extends Component {
       <Route exact path ="/feedback-support" component={FeedbackSupport}/>
       <Route exact path ="/feedback-comments" component={FeedbackComments}/>
       <Route exact path ="/feedback-success" component={FeedbackSucess}/>
+      <Route exact path ="/feedback-review" component ={FeedbackComments}/>
         </div>
       </Router>
       </div>

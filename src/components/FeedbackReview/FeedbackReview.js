@@ -2,8 +2,20 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 
 class FeedbackReview extends Component {
+    constructor(props){
+        super(props);{
+            this.state = {
+         
+            }
+        }
+    }
+    submitFeedback = () =>{
+
+    }
+
   render() {
-    //   const isenabled = '' 
+    const isEnabled = this.props.reduxStore.commentsReducer !== '';
+
     return (
       <div>
         <h1>Review Your Feedback</h1>
@@ -12,7 +24,7 @@ class FeedbackReview extends Component {
         <p>Understanding: {this.props.reduxStore.feedback.understanding}</p>
         <p>Support: {this.props.reduxStore.feedback.support}</p>
         <p>Comments: {this.props.reduxStore.feedback.comments}</p>
-        <button>Submit</button>
+        <button disabled={isEnabled}>Submit</button>
       </div>
     )
   }
