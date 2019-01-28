@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const router = express.Router();
 const pg = require('pg');
-const Pool = require('./../modules/pool.js');
+const Pool = require('../modules/pool.js');
 
 const pool = Pool;
 
