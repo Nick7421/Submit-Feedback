@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import axios from 'axios';
 
 class FeedbackReview extends Component {
     constructor(props){
@@ -10,7 +11,22 @@ class FeedbackReview extends Component {
             }
         }
     }
+    //tested to make sure my reduxStore object is showing correctly before sending to the server
+    // submitFeedback = () =>{
+    //     console.log(this.props.reduxStore.feedback);
+    //     }
+
     submitFeedback = () =>{
+        axios({
+            method: 'POST',
+            url: '/user-feedback',
+            data: this.props.reduxStore.feedback
+        }).then((response) => {
+            this.props.history.push('/feedback-success');
+        }).catch((error) => {
+            const errorMessage = `Server error: ${error}`;
+            alert(errorMessage);
+        })
     
     }
 
