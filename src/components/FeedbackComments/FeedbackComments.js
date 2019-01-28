@@ -29,7 +29,7 @@ class FeedbackComments extends Component {
         <input onChange={this.handleChange}type ="text" placeholder = "enter comments here" value = {this.state.comments}></input>
         <button onClick={this.handleNext}>Next</button>
       </div>
-      <FeedbackReview buttonShow />
+      <FeedbackReview history = {this.props.history}/>
       </div>
     )
   }
