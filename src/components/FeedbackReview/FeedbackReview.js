@@ -23,10 +23,8 @@ class FeedbackReview extends Component {
             url: '/userfeedback',
             data: this.props.reduxStore.feedback,
         }).then((response) => {
-            //*******The Following error was resolved by proping history to this component***********/
-            // I am getting an error Here when trying to go to the next page
-            // not sure if it is a timeing issue but it is
-            //saying push is undefined but my data does get to the server and into the database.
+            const action = { type: 'SUBMIT_CLEAR', };
+            this.props.dispatch(action);
             this.props.history.push('/feedback-success');
         }).catch((error) => {
             const errorMessage = `Server error: ${error}`;
