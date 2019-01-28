@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 
 class FeedbackSuccess extends Component {
+    handleChange = () => {
+        this.props.history.push('/feedback-comments');
+        
+    }
   render() {
 
     return (
@@ -10,7 +14,7 @@ class FeedbackSuccess extends Component {
         <h3>Thank you!</h3>
         <p></p>
         <h4>Please click below to submit new feedback</h4>
-        <button>Leave New Feedback</button>
+        <button onClick ={this.handleChange}>Leave New Feedback</button>
       </div>
     )
   }

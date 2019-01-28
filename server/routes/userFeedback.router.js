@@ -1,11 +1,19 @@
-const pool = require('../modules/pool.js');
 const express = require('express');
 const bodyParser = require('body-parser');
 const router = express.Router();
+const pg = require('pg');
+
+const pool = new pg.Pool({
+    host: 'localhost',
+    port: 5432,
+    database: 'prime_feedback',
+    max: 10,
+    idleTimeoutMillis: 10000,
+});
 
 
 //POST the user inputs
-router.post('/user-feedback', (req, res) => {
+router.post('/', (req, res) => {
 
     pool.query(`
         INSERT INTO "feedback" ("feeling", "understanding", "support", "comments") 

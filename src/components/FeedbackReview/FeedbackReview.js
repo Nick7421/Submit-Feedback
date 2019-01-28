@@ -16,16 +16,19 @@ class FeedbackReview extends Component {
     //     console.log(this.props.reduxStore.feedback);
     //     }
 
-    submitFeedback = () =>{
+    submitFeedback = () => {
         axios({
             method: 'POST',
-            url: '/user-feedback',
-            data: this.props.reduxStore.feedback
+            url: '/userfeedback',
+            data: this.props.reduxStore.feedback,
         }).then((response) => {
+            // I am getting an error Here when trying to go to the next page
+            // not sure if it is a timeing issue but it is
+            //saying push is unddefined.
             this.props.history.push('/feedback-success');
         }).catch((error) => {
             const errorMessage = `Server error: ${error}`;
-            alert(errorMessage);
+            console.log(errorMessage);
         })
     
     }
